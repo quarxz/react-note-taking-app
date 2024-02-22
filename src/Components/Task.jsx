@@ -1,4 +1,4 @@
-import styles from "./task.module.css";
+import styles from "./Task.module.css";
 
 export function Task({ todo, onDeleteTask }) {
   function handleDeleteTask() {
