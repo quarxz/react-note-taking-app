@@ -45,18 +45,19 @@
   gap: 15px;
 }
 
-.card h2 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-
 .card button {
-  width: 100%;
+  width: 50%;
   font-size: 20px;
   line-height: 1;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+button.btn-logout:hover {
+  border-color: #f94646;
+}
+button.btn-login:hover {
+  border-color: #a2f946;
 }

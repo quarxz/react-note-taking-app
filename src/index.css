@@ -53,12 +53,17 @@ main {
 }
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2.2em;
+  line-height: 1.8;
 }
 
 p {
   font-size: 1.3em;
-  line-height: 0.3em;
+  line-height: 0.5em;
 }
 
 button {
