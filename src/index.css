@@ -1,7 +1,18 @@
+@font-face {
+  font-family: "Handlee";
+  src: url("../src/assets/fonts/Handlee/Handlee-Regular.ttf");
+
+  font-family: "GrapeNuts";
+  src: url("../src/assets/fonts/Grape_Nuts/Grape_Nuts/GrapeNuts-Regular.ttf");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "GrapeNuts", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
+
+  font-style: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -11,6 +22,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -25,14 +42,23 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  justify-content: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
-
+main {
+  display: flex;
+  width: 50vh;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 0.3em;
 }
 
 button {
@@ -65,4 +91,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+form label,
+p {
+  text-align: left;
+}
+button {
+  display: block;
+  margin-top: 1em;
+}
+
+input {
+  width: 100%;
+  padding: 0.1em 0.5em;
+  font-family: "GrapeNuts", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
 }
