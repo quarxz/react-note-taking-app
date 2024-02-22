@@ -52,11 +52,11 @@ function App() {
   return (
     <main>
       <section className={styles.card}>
-        {user.name ? <h1>Note Taking App</h1> : <h1>Login</h1>}
-        {user.name ? <h2>Logged User:</h2> : undefined}
-        {user.name ? <p>User: {user.name}</p> : undefined}
-        {user.name ? <p>eMail: {user.email}</p> : undefined}
-        {user.name ? (
+        {user?.name ? <h1>Note Taking App</h1> : <h1>Login</h1>}
+        {user?.name ? <h2>Logged User:</h2> : undefined}
+        {user?.name ? <p>User: {user.name}</p> : undefined}
+        {user?.name ? <p>eMail: {user.email}</p> : undefined}
+        {user?.name ? (
           <button
             className={styles["btn-login"]}
             onClick={() => {
@@ -66,12 +66,12 @@ function App() {
             Add ToDo
           </button>
         ) : undefined}
-        {isFormOpen && user.name ? (
+        {isFormOpen && user?.name ? (
           <TaskForm onAddTask={handleAddTask} />
         ) : (
           <></>
         )}
-        {user.name
+        {user?.name
           ? tasks.map((task) => {
               return (
                 <Task
@@ -90,7 +90,7 @@ function App() {
               );
             })
           : undefined}
-        {user.name ? undefined : (
+        {user?.name ? undefined : (
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -120,7 +120,7 @@ function App() {
           </form>
         )}
 
-        {user.name ? (
+        {user?.name ? (
           <button
             className={styles["btn-logout"]}
             onClick={() => {
